@@ -15,7 +15,7 @@ stages {
             script{
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
-                if (!validacionSencilla("$archivo2")) {
+                if (!validacionSencilla("$archivo1")) {
                     echo 'no existe'
                 } 
             }
