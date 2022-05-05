@@ -25,7 +25,7 @@ stages {
     stage('create directory sin sh'){
         steps{
             script{
-                crearDirectorio("${directorio}")
+                crearDirectorio("$directorio")
                 sh 'ls -al'
             }
         }
