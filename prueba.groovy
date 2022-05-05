@@ -26,6 +26,7 @@ stages {
         steps{
             script{
                 crearDirectorio("${directorio}")
+                sh 'ls -al'
             }
         }
     }
