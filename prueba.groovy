@@ -10,5 +10,15 @@ stages {
             sh 'ls -al'
         }
     }
+    stage('validar archivo'){
+        stpes{
+            def comando= """if [ -f ${archivo1} ]; then echo "Existe" ; else echo "No existe" ;fi"""
+            def result = sh (
+                script: comando,
+                returnStdout: true
+            )
+            result = "Existe" ? true : false
+        }
+    }
 }
 }
