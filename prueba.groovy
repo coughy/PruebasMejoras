@@ -29,6 +29,7 @@ def existeArchivo(archivo){
                 script: comando,
                 returnStdout: true
             )
+            echo "${result}"
             result = "Existe" ? true : false
             return result
 }
