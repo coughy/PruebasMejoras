@@ -34,7 +34,7 @@ stages {
 }
 }
 def crearDirectorio(directorio){
-   File fullPath = new File('./${directorio}')
+   File fullPath = new File("./${directorio}")
     if (!fullPath.exists())
         fullPath.mkdirs() 
 }
