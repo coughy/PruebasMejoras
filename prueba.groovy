@@ -12,13 +12,13 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            echo 'Validacion'
-            existeLocal("${archivo1}")
+            existeLocal("${archivo2}")
         }
     }
 }
 }
 def existeLocal(archivo){
+    echo 'Validacion'
     if (!existeArchivo("${archivo}")) {
         echo "no existe"
     } 
