@@ -12,8 +12,10 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            vali = existeArchivo("${archivo1}")
-            echo "${vali}"
+            if(!existeArchivo("${archivo1}"){
+                echo "no existe"
+            }
+            
         }
     }
 }
