@@ -15,13 +15,23 @@ stages {
             script{
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
-                if (fileExists("${archivo1}")) {
-                echo "File  found!"
-            }
+                if (!validacionSencilla("$archivo")) {
+                    echo 'no existe'
+                } 
             }
         }
     }
 }
+}
+def validacionSencilla(archivo){
+    def comando
+    if (fileExists(archivo)) {
+        comando = true
+    }
+    else {
+        comando = false 
+    }
+    return comando
 }
 def existeLocal(archivo){
     echo 'Validacion'
