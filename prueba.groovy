@@ -12,17 +12,16 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            existeLocal("${archivo2}")
-            echo "Validar sencillo"
-            validarSencillo("${archivo1}")
+            script{
+                existeLocal("${archivo2}")
+                echo "Validar sencillo"
+                if (fileExists("${archivo1}") {
+                echo "File  found!"
+            }
+            }
         }
     }
 }
-}
-def validarSencillo(archivo){
-    def file = new File(${archivo})
-    assert file.exists() : "file not found"
-
 }
 def existeLocal(archivo){
     echo 'Validacion'
