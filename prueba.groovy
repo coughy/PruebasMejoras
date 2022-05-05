@@ -15,7 +15,7 @@ stages {
             script{
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
-                if (fileExists("${archivo1}") {
+                if (fileExists("${archivo1}")) {
                 echo "File  found!"
             }
             }
