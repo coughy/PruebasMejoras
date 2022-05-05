@@ -12,7 +12,8 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            existeArchivo("${archivo1}")
+            vali = existeArchivo("${archivo1}")
+            echo "${vali}"
         }
     }
 }
@@ -25,4 +26,5 @@ def existeArchivo(archivo){
                 returnStdout: true
             )
             result = "Existe" ? true : false
+            return result
 }
