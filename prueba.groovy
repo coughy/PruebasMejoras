@@ -20,7 +20,7 @@ stages {
 def existeLocal(archivo){
     echo 'Validacion'
     if (!existeArchivo("${archivo}")) {
-        echo "no existe"
+        echo 'no existe'
     } 
 }
 def existeArchivo(archivo){
