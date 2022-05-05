@@ -24,12 +24,9 @@ stages {
 }
 }
 def validacionSencilla(archivo){
-    def comando
+    def comando = false
     if (fileExists(archivo)) {
         comando = true
-    }
-    else {
-        comando = false 
     }
     return comando
 }
