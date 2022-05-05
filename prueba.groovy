@@ -1,6 +1,6 @@
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
-def directorio = "prueba"
+def directorioname = "prueba"
 pipeline {
 agent any
 stages {
@@ -25,7 +25,8 @@ stages {
     stage('create directory sin sh'){
         steps{
             script{
-                crearDirectorio("$directorio")
+                echo "$directorioname"
+                crearDirectorio("$directorioname")
                 sh 'ls -al'
             }
         }
@@ -34,9 +35,16 @@ stages {
 }
 }
 def crearDirectorio(directorio){
-   File nombrDirectorio = new File(directorio)
-    if (!nombrDirectorio.exists())
-        nombrDirectorio.mkdirs() 
+    echo "${env.WORKSPACE}/${directorio}"
+   File nombrDirectorio = new File("${env.WORKSPACE}/${directorio}")
+    if (!nombrDirectorio.exists()) {
+        nombrDirectorio.mkdirs()
+        sh 'ls -al' 
+    }
+    else{
+        echo "eliminar directorio"
+        nombrDirectorio.deleteDir()
+    }
 }
 def validacionSencilla(archivo){
     def comando = false
