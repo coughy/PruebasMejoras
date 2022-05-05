@@ -35,8 +35,8 @@ stages {
 }
 def crearDirectorio(directorio){
    File nombrDirectorio = new File("${directorio}")
-    if (!fullPath.exists())
-        fullPath.mkdirs() 
+    if (!nombrDirectorio.exists())
+        nombrDirectorio.mkdirs() 
 }
 def validacionSencilla(archivo){
     def comando = false
