@@ -34,7 +34,7 @@ stages {
 }
 }
 def crearDirectorio(directorio){
-   File nombrDirectorio = new File("${directorio}")
+   File nombrDirectorio = new File(directorio)
     if (!nombrDirectorio.exists())
         nombrDirectorio.mkdirs() 
 }
