@@ -1,3 +1,5 @@
+import mx.com.utils.Validate
+def validate = new Validate(this)
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
 def directorioname = "prueba"
@@ -16,7 +18,7 @@ stages {
             script{
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
-                if (!validacionSencilla("$archivo1")) {
+                if (!validate.validacionSencilla("$archivo1")) {
                     echo 'no existe'
                 } 
             }
@@ -46,13 +48,7 @@ def crearDirectorio(directorio){
         nombrDirectorio.deleteDir()
     }
 }
-def validacionSencilla(archivo){
-    def comando = false
-    if (fileExists(archivo)) {
-        comando = true
-    }
-    return comando
-}
+
 def existeLocal(archivo){
     echo 'Validacion'
     if (!existeArchivo("${archivo}")) {
