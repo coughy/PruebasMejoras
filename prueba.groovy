@@ -12,15 +12,17 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            echo 'Validacion'
-            if (!existeArchivo("${archivo1}")) {
-                echo "no existe"
-            } 
+            existeLocal("${archivo1}")
         }
     }
 }
 }
-
+def existeLocal(archivo){
+    echo 'Validacion'
+    if (!existeArchivo("${archivo}")) {
+        echo "no existe"
+    } 
+}
 def existeArchivo(archivo){
             def comando= """if [ -f ${archivo} ]; then echo "Existe" ; else echo "No existe" ;fi"""
             def result = sh (
