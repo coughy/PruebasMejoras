@@ -12,7 +12,7 @@ stages {
     }
     stage('validar archivo'){
         steps{
-            existeArchivo(${archivo1})
+            existeArchivo("${archivo1}")
         }
     }
 }
