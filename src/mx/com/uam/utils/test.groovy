@@ -1,4 +1,4 @@
-package mx.com.utils
+package mx.com.uam.utils
 
 class Validate implements Serializable {
 

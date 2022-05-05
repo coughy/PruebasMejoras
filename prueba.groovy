@@ -1,4 +1,4 @@
-import mx.com.utils.Validate
+import mx.com.uam.utils.Validate
 def validate = new Validate(this)
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
