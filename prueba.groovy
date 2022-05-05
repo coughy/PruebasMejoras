@@ -11,7 +11,7 @@ stages {
         }
     }
     stage('validar archivo'){
-        stpes{
+        steps{
             def comando= """if [ -f ${archivo1} ]; then echo "Existe" ; else echo "No existe" ;fi"""
             def result = sh (
                 script: comando,
