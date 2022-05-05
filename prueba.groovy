@@ -1,6 +1,6 @@
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
-def directorio = prueba
+def directorio = "prueba"
 pipeline {
 agent any
 stages {
@@ -25,7 +25,7 @@ stages {
     stage('create directory sin sh'){
         steps{
             script{
-                crearDirectorio("$directorio")
+                crearDirectorio("${directorio}")
             }
         }
     }
