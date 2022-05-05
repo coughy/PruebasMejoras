@@ -12,6 +12,7 @@ stages {
     }
     stage('validar archivo'){
         steps{
+            echo 'Validacion'
             if (!existeArchivo("${archivo1}")) {
                 echo "no existe"
             } 
