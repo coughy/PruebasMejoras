@@ -1,3 +1,4 @@
+@Library('testlibrary@')
 import mx.com.uam.utils.test
 
 def validate = new Validate(this)
