@@ -1,11 +1,12 @@
 @Library('java-classes@javatest') _
 import mx.com.uam.utils.Validate
-import java.io.File
+
 def validate = new Validate()
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
 def directorioname = "prueba"
 pipeline {
+import java.io.File
 agent any
 stages {
     stage('Hello'){
