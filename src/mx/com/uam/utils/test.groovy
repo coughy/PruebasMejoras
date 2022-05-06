@@ -1,6 +1,6 @@
 package mx.com.uam.utils
 
-class Test implements Serializable {
+class Validate implements Serializable {
 
 def validacionSencilla(archivo){
     def comando = false
