@@ -20,7 +20,7 @@ stages {
             script{
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
-                if (!validate.validacionSencilla("$archivo1")) {
+                if (!validate("$archivo1")) {
                     echo 'no existe'
                 } 
             }
