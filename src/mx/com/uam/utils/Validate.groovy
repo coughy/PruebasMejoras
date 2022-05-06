@@ -1,12 +1,10 @@
 package mx.com.uam.utils
-import jenkins.model.*
-
 
 class Validate {
 
 def validacionSencilla(archivo){
     def comando = false
-    if (script.fileExists(archivo)) {
+    if (fileExists(archivo)) {
         comando = true
     }
     return comando
