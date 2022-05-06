@@ -1,6 +1,6 @@
 @Library('java-classes@javatest') _
 import mx.com.uam.utils.Validate
-
+import jenkins.model.*
 def validate = new Validate()
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
