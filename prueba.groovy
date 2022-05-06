@@ -1,5 +1,5 @@
-@Library('java-classes@javatest')
-import mx.com.uam.utils.test
+@Library('java-classes@javatest') _
+import mx.com.uam.utils.Validate
 
 def validate = new Validate()
 def archivo1 = "prueba.txt"
