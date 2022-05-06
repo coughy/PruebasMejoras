@@ -1,10 +1,10 @@
 package mx.com.uam.utils
-import java.io.File
+
 class Validate {
 
 def validacionSencilla(archivo){
     def comando = false
-    if (fileExists(archivo)) {
+    if (file.exists(archivo)) {
         comando = true
     }
     return comando
