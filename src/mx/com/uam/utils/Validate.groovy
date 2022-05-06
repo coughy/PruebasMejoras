@@ -1,5 +1,5 @@
 package mx.com.uam.utils
-
+import java.io
 class Validate {
 
 def validacionSencilla(archivo){
