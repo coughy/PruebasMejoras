@@ -1,7 +1,7 @@
 @Library('java-classes@javatest') _
 import mx.com.uam.utils.Validate
 
-def validate = new Validate(this)
+def validate = new Validate()
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
 def directorioname = "prueba"
