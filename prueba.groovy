@@ -1,6 +1,7 @@
 @Library('java-classes@javatest') 
 import mx.com.uam.utils.test
 
+def validate = new Validate()
 def archivo1 = "prueba.txt"
 def archivo2 = "prueba2.txt"
 def directorioname = "prueba"
@@ -17,7 +18,6 @@ stages {
     stage('validar archivo'){
         steps{
             script{
-                def validate = new Validate()
                 existeLocal("${archivo2}")
                 echo "Validar sencillo"
                 if (!validate.validacionSencilla("$archivo1")) {
