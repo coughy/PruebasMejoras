@@ -1,5 +1,5 @@
 package mx.com.uam.utils
-import java.io.File
+
 
 class Validate {
 
