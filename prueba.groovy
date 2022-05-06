@@ -1,4 +1,4 @@
-@Library('java-classes@javatest') _
+@Library('java-classes@javatest')
 import mx.com.uam.utils.Validate
 
 def validate = new Validate()
