@@ -23,6 +23,7 @@ stages {
                 if (!validate.validacionSencilla("$archivo1")) {
                     echo 'no existe'
                 } 
+                echo "salida"
             }
         }
     }
