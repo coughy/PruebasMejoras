@@ -3,7 +3,7 @@ import java.io.File
 class Validate {
 
 def validacionSencilla(archivo){
-    File file = archivo
+    File file = new File(archivo)
     def comando = false
     if (file.exists()) {
         comando = true
