@@ -4,7 +4,7 @@ class Validate {
 
 def validacionSencilla(archivo){
     def comando = false
-    if (fileExists(archivo)) {
+    if (archivo.exists()) {
         comando = true
     }
     return comando
